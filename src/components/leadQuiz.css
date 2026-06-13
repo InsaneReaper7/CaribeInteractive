@@ -1,0 +1,404 @@
+/* Lead Quiz Container */
+.quiz-card {
+  width: 100%;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+  .quiz-card {
+    padding: 24px 16px;
+  }
+}
+
+/* Progress Indicator */
+.quiz-progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.quiz-progress-bar-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.quiz-progress-bar-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--gradient-brand);
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: width var(--trans-normal) ease;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.quiz-step-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0d1224;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-muted);
+  z-index: 2;
+  position: relative;
+  transition: all var(--trans-normal);
+}
+
+.quiz-step-dot.active {
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+.quiz-step-dot.completed {
+  background: var(--gradient-brand);
+  border-color: var(--primary);
+  color: #030712;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+/* Form Steps Viewport */
+.quiz-step-pane {
+  display: none;
+  animation: fadeIn var(--trans-normal) forwards;
+}
+
+.quiz-step-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Common Form Elements */
+.quiz-form-group {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.quiz-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .quiz-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.quiz-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.quiz-input, .quiz-textarea {
+  width: 100%;
+  background: rgba(5, 7, 15, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: all var(--trans-fast);
+}
+
+.quiz-input:focus, .quiz-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
+  background: rgba(5, 7, 15, 0.8);
+}
+
+.quiz-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Step 2: Checkbox Cards Grid */
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.quiz-check-card {
+  position: relative;
+  cursor: pointer;
+  padding: 24px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all var(--trans-normal);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.quiz-check-card input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.quiz-check-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all var(--trans-normal);
+}
+
+.quiz-check-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 242, 254, 0.3);
+}
+
+.quiz-check-card.checked {
+  background: rgba(0, 242, 254, 0.04);
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+}
+
+.quiz-check-card.checked .quiz-check-icon {
+  background: var(--gradient-brand);
+  color: #030712;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+.quiz-check-title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color var(--trans-fast);
+}
+
+.quiz-check-card.checked .quiz-check-title {
+  color: var(--primary);
+}
+
+/* Step 3: Range Slider Customization */
+.quiz-slider-container {
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.quiz-slider-value {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 24px;
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
+.quiz-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+  margin-bottom: 16px;
+}
+
+.quiz-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+  transition: transform 0.1s;
+}
+
+.quiz-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.quiz-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Step Footer / Buttons Container */
+.quiz-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.quiz-footer .btn {
+  min-width: 120px;
+}
+
+.quiz-footer .btn-back {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+}
+
+.quiz-footer .btn-back:hover {
+  color: var(--text-main);
+}
+
+/* Step 4: Success & Roadmap Mockup */
+.quiz-success-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.quiz-success-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 242, 254, 0.1);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin: 0 auto 24px auto;
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 15px rgba(0, 242, 254, 0.2); transform: scale(1); }
+  100% { box-shadow: 0 0 35px rgba(0, 242, 254, 0.5); transform: scale(1.05); }
+}
+
+.quiz-success-container h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.quiz-success-container p {
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  font-size: 15px;
+}
+
+.roadmap-card {
+  text-align: left;
+  background: rgba(5, 7, 15, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.roadmap-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roadmap-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.roadmap-timeline::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.roadmap-node {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.roadmap-node::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -32px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0d1224;
+  border: 2px solid var(--text-muted);
+  transition: all 0.3s;
+}
+
+.roadmap-node.active::before {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.roadmap-node-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.roadmap-node-desc {
+  color: var(--text-muted);
+  font-size: 14px;
+}

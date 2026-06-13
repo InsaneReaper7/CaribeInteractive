@@ -1,0 +1,169 @@
+/* Medical Office Portal Theme Styles */
+.medical-body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0c1524;
+  color: #c3d1e0;
+  padding: 20px;
+  min-height: 100%;
+}
+
+.medical-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 242, 254, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.medical-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.medical-logo span {
+  color: #00f2fe;
+}
+
+/* Calendar Grid Style */
+.med-calendar-container {
+  background: #14213d;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.med-cal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.med-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+
+.med-cal-day-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  color: #00f2fe;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.med-cal-cell {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  background: #19274e;
+  color: #cbd5e1;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.med-cal-cell:hover:not(.empty):not(.disabled) {
+  border-color: #00f2fe;
+  color: #ffffff;
+}
+
+.med-cal-cell.selected {
+  background: #00f2fe;
+  color: #0c1524;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+}
+
+.med-cal-cell.disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  background: transparent;
+}
+
+.med-cal-cell.empty {
+  background: transparent;
+  cursor: default;
+}
+
+/* Timeslot Grid Styles */
+.med-slots-title {
+  font-family: 'Outfit', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.med-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.med-slot-btn {
+  background: #14213d;
+  border: 1px solid rgba(255,255,255,0.05);
+  color: #cbd5e1;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.med-slot-btn:hover:not(.booked) {
+  border-color: #00f2fe;
+  color: #ffffff;
+}
+
+.med-slot-btn.selected {
+  background: #00f2fe;
+  color: #0c1524;
+  font-weight: 700;
+  border-color: #00f2fe;
+}
+
+.med-slot-btn.booked {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: transparent;
+  text-decoration: line-through;
+}
+
+/* Portal Panel Splits */
+.med-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .med-split {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.med-right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}

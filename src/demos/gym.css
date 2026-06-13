@@ -1,0 +1,153 @@
+/* Gym Demo Theme Styles */
+.gym-body {
+  font-family: 'Inter', sans-serif;
+  background-color: #080c10;
+  color: #90a0b0;
+  padding: 20px;
+  min-height: 100%;
+}
+
+.gym-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ea580c;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.gym-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.gym-logo span {
+  color: #ea580c;
+}
+
+/* Gym Card Grid Splits */
+.gym-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .gym-split {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.gym-card {
+  background: #10151c;
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+}
+
+.gym-calc-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gym-calc-title::before {
+  content: '⚡';
+  color: #ea580c;
+}
+
+/* Calculator Values Styles */
+.gym-total-box {
+  background: radial-gradient(circle at top left, #1c1511 0%, #10151c 100%);
+  border: 1px solid rgba(234, 88, 12, 0.2);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gym-total-val {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #ea580c;
+  margin: 10px 0;
+  text-shadow: 0 0 15px rgba(234, 88, 12, 0.2);
+}
+
+/* Weekly Classes Scheduler List */
+.gym-schedule-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.gym-schedule-tab {
+  background: #141c24;
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #90a0b0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+}
+
+.gym-schedule-tab.active {
+  background: #ea580c;
+  color: #ffffff;
+}
+
+.gym-classes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gym-class-item {
+  background: #10151c;
+  border-left: 3px solid #ea580c;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gym-class-info {
+  text-align: left;
+}
+
+.gym-class-name {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.gym-class-instructor {
+  font-size: 10px;
+  color: #607080;
+}
+
+.gym-class-time {
+  font-family: 'Outfit', sans-serif;
+  color: #ea580c;
+  font-weight: 700;
+  font-size: 13px;
+}

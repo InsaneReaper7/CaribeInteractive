@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags -->
+    <title>Caribe Interactive | Premium Web, App & Game Design in Puerto Rico</title>
+    <meta name="description" content="Caribe Interactive is a premium digital agency in Puerto Rico. We build high-performance websites, custom apps, interactive games, and branding that converts visitors into customers." />
+    <meta name="keywords" content="web design puerto rico, web development, custom software, app development, logo design, game development, caribe interactive, digital agency" />
+    <meta name="author" content="Caribe Interactive" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.caribeinteractive.com/" />
+    <meta property="og:title" content="Caribe Interactive | Premium Web, App & Game Design" />
+    <meta property="og:description" content="We help Puerto Rico businesses stand out online with modern websites, branding, and custom software solutions." />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Caribe Interactive | Premium Web, App & Game Design" />
+    <meta property="twitter:description" content="We help Puerto Rico businesses stand out online with modern websites, branding, and custom software solutions." />
+  </head>
+  <body>
+    <!-- Background mesh animations -->
+    <div class="bg-mesh">
+      <div class="mesh-circle mesh-circle-1"></div>
+      <div class="mesh-circle mesh-circle-2"></div>
+      <div class="mesh-circle mesh-circle-3"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header id="main-header">
+      <div class="container">
+        <a href="#" class="logo-container" id="nav-logo">
+          <div class="logo-icon">C</div>
+          <span class="logo-text">Caribe<span>Interactive</span></span>
+        </a>
+        <nav>
+          <ul class="nav-links" id="nav-menu">
+            <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+            <li><a href="#portfolio" class="nav-link" data-i18n="nav_demos">Live Demos</a></li>
+            <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Packages</a></li>
+            <li><a href="#care" class="nav-link" data-i18n="nav_care">Care Plans</a></li>
+            <!-- Language Selection Toggle Button -->
+            <li>
+              <button id="lang-toggle-btn" class="portfolio-tab-btn" style="padding: 6px 12px; font-size: 13px; font-weight: 700; border: 1px solid var(--border-color); color: var(--primary);">
+                ES
+              </button>
+            </li>
+            <li><a href="#quote" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="nav_cta">Get a Quote</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-sec" id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <h1 class="hero-title" data-i18n="hero_title">Websites, Apps & <span>Digital Solutions</span> for Puerto Rico Businesses</h1>
+              <p class="hero-sub" data-i18n="hero_sub">We help local businesses stand out online with modern websites, branding, and custom software solutions.</p>
+              <div class="hero-btns">
+                <a href="#quote" class="btn btn-primary" id="hero-btn-quote">
+                  <span data-i18n="hero_cta_quote">Get a Free Quote</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="#portfolio" class="btn btn-secondary" data-i18n="hero_cta_demos">View Live Demos</a>
+              </div>
+            </div>
+            
+            <div class="hero-visual">
+              <div class="hero-visual-card">
+                <div class="hero-widget-header">
+                  <div class="hero-dots">
+                    <span class="hero-dot"></span>
+                    <span class="hero-dot"></span>
+                    <span class="hero-dot"></span>
+                  </div>
+                  <div class="hero-tag" data-i18n="hero_tag" style="font-size: 11px; font-weight:600; color:var(--primary); text-transform:uppercase; letter-spacing:1px;">Live Analytics</div>
+                </div>
+                <div class="hero-widget-body">
+                  <div class="hero-tagline" data-i18n="hero_tagline">Grow Your Business</div>
+                  <div class="hero-chart-container" id="hero-chart">
+                    <div class="hero-chart-bar" style="height: 40%"></div>
+                    <div class="hero-chart-bar" style="height: 65%"></div>
+                    <div class="hero-chart-bar" style="height: 50%"></div>
+                    <div class="hero-chart-bar" style="height: 85%"></div>
+                    <div class="hero-chart-bar" style="height: 70%"></div>
+                    <div class="hero-chart-bar" style="height: 100%"></div>
+                  </div>
+                </div>
+                <div class="hero-widget-footer">
+                  <div class="hero-stat"><span data-i18n="hero_growth">Growth:</span> <span>+142%</span></div>
+                  <div class="hero-stat"><span data-i18n="hero_leads">Leads:</span> <span data-i18n="hero_leads_active">Active</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="services_tag">What We Do</span>
+            <h2 class="section-title" data-i18n="services_title">Services Tailored for Growth</h2>
+            <p class="section-subtitle" data-i18n="services_sub">We design and build bespoke digital experiences that engage customers and streamline your operations.</p>
+          </div>
+          
+          <div class="services-grid">
+            <!-- Website Design -->
+            <div class="service-card glass-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 data-i18n="service_web_title">Website Design</h3>
+              <p data-i18n="service_web_desc">Stunning, modern, mobile-friendly websites customized for your brand. Optimized for fast loading speeds and high client conversion rates.</p>
+            </div>
+            
+            <!-- App Development -->
+            <div class="service-card glass-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
+              <h3 data-i18n="service_app_title">App Development</h3>
+              <p data-i18n="service_app_desc">Powerful mobile applications for iOS and Android. Help your customers book, buy, or engage with you directly from their phones.</p>
+            </div>
+            
+            <!-- Custom Software -->
+            <div class="service-card glass-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3 data-i18n="service_software_title">Custom Software</h3>
+              <p data-i18n="service_software_desc">Tailor-made software to solve complex workflow problems: customer dashboards, booking portals, employee portals, and inventory trackers.</p>
+            </div>
+
+            <!-- Game Development -->
+            <div class="service-card glass-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 12h4m-2-2v4M15 11h.01M18 13h.01"></path></svg>
+              </div>
+              <h3 data-i18n="service_game_title">Game Development</h3>
+              <p data-i18n="service_game_desc">Interactive mini-games, promotional giveaways (like "Spin to Win"), and educational games built to keep users hooked on your site.</p>
+            </div>
+            
+            <!-- Logo & Branding -->
+            <div class="service-card glass-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path></svg>
+              </div>
+              <h3 data-i18n="service_brand_title">Logo & Branding</h3>
+              <p data-i18n="service_brand_desc">Professional logo design, color selection, visual brand guidelines, and identity design that commands attention in local industries.</p>
+            </div>
+            
+            <!-- Website Maintenance -->
+            <div class="service-card glass-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <h3 data-i18n="service_maint_title">Website Maintenance</h3>
+              <p data-i18n="service_maint_desc">Keep your site secure, fully updated, backed up, and running at top speeds. Hosting support and regular content revisions are fully covered.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section with Interactive Demo Simulator -->
+      <section id="portfolio" class="portfolio-sec">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="portfolio_tag">Interactive Playground</span>
+            <h2 class="section-title" data-i18n="portfolio_title">Test Drive Our Work</h2>
+            <p class="section-subtitle" data-i18n="portfolio_sub">Click through our interactive demo projects. Test active reservation screens, before/after sliders, calculator tools, and lucky wheels!</p>
+          </div>
+
+          <!-- Tabs to change between demos -->
+          <div class="portfolio-nav">
+            <button class="portfolio-tab-btn active" data-demo="restaurant" data-i18n="portfolio_tab_restaurant">Restaurant Website</button>
+            <button class="portfolio-tab-btn" data-demo="contractor" data-i18n="portfolio_tab_contractor">Home Contractor</button>
+            <button class="portfolio-tab-btn" data-demo="medical" data-i18n="portfolio_tab_medical">Medical Office</button>
+            <button class="portfolio-tab-btn" data-demo="gym" data-i18n="portfolio_tab_gym">Gym & Fitness</button>
+            <button class="portfolio-tab-btn" data-demo="law" data-i18n="portfolio_tab_law">Law Firm Portal</button>
+          </div>
+
+          <!-- Simulator Device Frame -->
+          <div class="simulator-container">
+            <div class="simulator-frame">
+              <div class="sim-header-bar">
+                <div class="hero-dots">
+                  <span class="hero-dot"></span>
+                  <span class="hero-dot"></span>
+                  <span class="hero-dot"></span>
+                </div>
+                <!-- Simulated URL Address Bar -->
+                <div class="sim-address">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  https://www.caribeinteractive.com/demo/<span>restaurant</span>
+                </div>
+                <!-- Device Resolution Sizers -->
+                <div class="sim-device-controls">
+                  <button class="sim-device-btn active" data-view="desktop" title="Desktop view">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  </button>
+                  <button class="sim-device-btn" data-view="tablet" title="Tablet view">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                  </button>
+                  <button class="sim-device-btn" data-view="mobile" title="Mobile view">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="sim-viewport-wrapper">
+                <!-- Sandbox Viewport Area where JS will render the sub-application -->
+                <div class="sim-viewport desktop-view" id="sim-viewport-content">
+                  <!-- The active demo gets injected here dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packages Section -->
+      <section id="pricing">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="pricing_tag">Fair & Transparent</span>
+            <h2 class="section-title" data-i18n="pricing_title">Our Recommended Packages</h2>
+            <p class="section-subtitle" data-i18n="pricing_sub">High-value setups designed for businesses ready to dominate their local market. Pick a size that fits your current goals.</p>
+          </div>
+
+
+          <!-- Informative / Interactive Toggle Tabs -->
+          <div class="portfolio-nav" style="margin-bottom: 40px;">
+            <button class="portfolio-tab-btn active" id="pkg-toggle-informative" data-pkg-type="informative" data-i18n="pkg_toggle_informative">Informative Sites</button>
+            <button class="portfolio-tab-btn" id="pkg-toggle-interactive" data-pkg-type="interactive" data-i18n="pkg_toggle_interactive">Interactive Sites (Shop/Checkout)</button>
+          </div>
+
+          <!-- Packages Grid -->
+          <div class="pricing-grid">
+            <!-- Launch Package -->
+            <div class="price-card glass-card" id="package-launch">
+              <div class="price-card-header">
+                <h3 class="price-card-title" data-i18n="pkg_launch_title">Launch</h3>
+                <p class="price-card-desc" data-i18n="pkg_launch_desc">Perfect for startups and local businesses.</p>
+              </div>
+              <div class="price-amount-container">
+                <span class="price-currency">$</span>
+                <span class="price-val" id="price-val-launch" data-price-info="595" data-price-inter="895">595</span>
+                <span class="price-period" data-i18n="pkg_onetime">one-time</span>
+              </div>
+              <div class="price-delivery" data-i18n="pkg_launch_delivery">Delivery: 1-2 weeks</div>
+              <ul class="price-features">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_3_pages">Up to 3 pages</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_mobile">Mobile-friendly website</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_form">Contact form</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_whatsapp">WhatsApp integration</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_social">Social media links</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_domain">Domain included (1 yr)</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_hosting">1 year basic hosting</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_ssl">SSL Security Setup</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_rev_1">1 revision round</span></li>
+                <!-- Interactive Only Feature -->
+                <li class="interactive-only-feature" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong style="color:var(--primary);"><span data-i18n="list_checkout">Checkout / Shopping System</span></strong></li>
+              </ul>
+              <a href="#quote" class="btn btn-secondary select-package-btn" id="btn-select-launch" data-package="Launch (Informative)" data-i18n="pkg_get_started">Get Started</a>
+            </div>
+
+            <!-- Growth Package -->
+            <div class="price-card featured glass-card" id="package-growth">
+              <div class="price-card-header">
+                <h3 class="price-card-title" data-i18n="pkg_growth_title">Growth</h3>
+                <p class="price-card-desc" data-i18n="pkg_growth_desc">Most popular for growing brands & local shops.</p>
+              </div>
+              <div class="price-amount-container">
+                <span class="price-currency">$</span>
+                <span class="price-val" id="price-val-growth" data-price-info="895" data-price-inter="1195">895</span>
+                <span class="price-period" data-i18n="pkg_onetime">one-time</span>
+              </div>
+              <div class="price-delivery" data-i18n="pkg_growth_delivery">Delivery: 2-3 weeks</div>
+              <ul class="price-features">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_6_pages">Up to 6 pages</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong><span data-i18n="list_everything_launch">Everything in Launch</span></strong></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_bilingual">Bilingual (English + Spanish)</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_seo_basic">Basic SEO setup</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_gbp">Google Business Profile</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_emails_5">5 Business Emails</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_rev_2">2 revision rounds</span></li>
+                <!-- Interactive Only Feature -->
+                <li class="interactive-only-feature" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong style="color:var(--primary);"><span data-i18n="list_checkout">Checkout / Shopping System</span></strong></li>
+              </ul>
+              <a href="#quote" class="btn btn-primary select-package-btn" id="btn-select-growth" data-package="Growth (Informative)" data-i18n="pkg_get_started">Get Started</a>
+            </div>
+
+            <!-- Business+ Package -->
+            <div class="price-card glass-card" id="package-business">
+              <div class="price-card-header">
+                <h3 class="price-card-title" data-i18n="pkg_business_title">Business+</h3>
+                <p class="price-card-desc" data-i18n="pkg_business_desc">Comprehensive website & branding toolkit.</p>
+              </div>
+              <div class="price-amount-container">
+                <span class="price-currency">$</span>
+                <span class="price-val" id="price-val-business" data-price-info="1295" data-price-inter="1595">1,295</span>
+                <span class="price-period" data-i18n="pkg_onetime">one-time</span>
+              </div>
+              <div class="price-delivery" data-i18n="pkg_business_delivery">Delivery: 3-4 weeks</div>
+              <ul class="price-features">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_10_pages">Up to 10 pages</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong><span data-i18n="list_everything_growth">Everything in Growth</span></strong></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_logo">Logo Redesign</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_img_opt">Image optimization</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_seo_basic">Basic SEO setup</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_emails_unlim">Unlimited Business Emails</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_blog">Blog layout setup</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="list_analytics">Analytics dashboard</span></li>
+                <!-- Interactive Only Feature -->
+                <li class="interactive-only-feature" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong style="color:var(--primary);"><span data-i18n="list_checkout">Checkout / Shopping System</span></strong></li>
+              </ul>
+              <a href="#quote" class="btn btn-secondary select-package-btn" id="btn-select-business" data-package="Business+ (Informative)" data-i18n="pkg_get_started">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Custom Solutions Section -->
+          <div class="section-header custom-pricing-header" style="margin-bottom: 40px;">
+            <span class="section-tag" data-i18n="custom_dev_tag">Custom Development</span>
+            <h2 class="section-title" data-i18n="custom_dev_title">Enterprise & Bespoke Apps</h2>
+            <p class="section-subtitle" data-i18n="custom_dev_sub">We design and code unique applications, workflows, and promotional tools tailored for your operational model.</p>
+          </div>
+
+          <div class="custom-grid">
+            <!-- Web Applications -->
+            <div class="custom-card glass-card">
+              <div class="custom-title-row">
+                <h3 data-i18n="custom_web_title">Web Applications</h3>
+                <span class="custom-tag" data-i18n="custom_dev_tag">Custom Software</span>
+              </div>
+              <div class="custom-price" data-i18n="custom_web_price">Starting at $2,500+</div>
+              <h4 class="custom-examples-header" data-i18n="custom_examples_header">Common Examples</h4>
+              <ul class="custom-examples">
+                <li data-i18n="ex_appointment">Appointment & scheduling systems</li>
+                <li data-i18n="ex_portal">Internal employee portals & trackers</li>
+                <li data-i18n="ex_dashboard">Customer portal dashboards & reporting</li>
+                <li data-i18n="ex_inventory">Live database inventories & stock logs</li>
+              </ul>
+              <a href="#quote" class="btn btn-secondary select-package-btn" data-package="Custom Web App" data-i18n="pkg_inquire">Inquire Now</a>
+            </div>
+
+            <!-- Mobile Apps -->
+            <div class="custom-card glass-card">
+              <div class="custom-title-row">
+                <h3 data-i18n="custom_mobile_title">Mobile Applications</h3>
+                <span class="custom-tag">iOS & Android</span>
+              </div>
+              <div class="custom-price" data-i18n="custom_mobile_price">Starting at $4,000+</div>
+              <h4 class="custom-examples-header" data-i18n="custom_examples_header">Common Examples</h4>
+              <ul class="custom-examples">
+                <li data-i18n="ex_loyalty">Business loyalty & loyalty stamp apps</li>
+                <li data-i18n="ex_membership">Subscription & user membership portals</li>
+                <li data-i18n="ex_booking">Interactive appointment bookings</li>
+                <li data-i18n="ex_catalog">Custom product catalogs with integrations</li>
+              </ul>
+              <a href="#quote" class="btn btn-secondary select-package-btn" data-package="Custom Mobile App" data-i18n="pkg_inquire">Inquire Now</a>
+            </div>
+
+            <!-- Interactive Experiences -->
+            <div class="custom-card glass-card">
+              <div class="custom-title-row">
+                <h3 data-i18n="custom_experience_title">Interactive Experiences</h3>
+                <span class="custom-tag" data-i18n="service_game_title">Website Games</span>
+              </div>
+              <div class="custom-price" data-i18n="custom_experience_price">Starting at $1,500+</div>
+              <h4 class="custom-examples-header" data-i18n="custom_examples_header">Common Examples</h4>
+              <ul class="custom-examples">
+                <li data-i18n="ex_wheel">Promotional luck wheels ("Spin to Win")</li>
+                <li data-i18n="ex_trivia">Event registration giveaways & trivia</li>
+                <li data-i18n="ex_edu">Interactive educational portals</li>
+                <li data-i18n="ex_mini">Custom brand engagement mini-games</li>
+              </ul>
+              <a href="#quote" class="btn btn-secondary select-package-btn" data-package="Custom Interactive Experience" data-i18n="pkg_inquire">Inquire Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Monthly Care Plans -->
+      <section id="care">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="care_tag">Peace of Mind</span>
+            <h2 class="section-title" data-i18n="care_title">Monthly Care Plans</h2>
+            <p class="section-subtitle" data-i18n="care_sub">Protect your digital investment. Keep your website online, updated, secure, and fast with our recurring management plans.</p>
+          </div>
+
+          <div class="care-plan-grid">
+            <!-- Essential Care -->
+            <div class="price-card glass-card">
+              <div class="price-card-header">
+                <h3 class="price-card-title" data-i18n="care_essential_title">Essential Care</h3>
+                <p class="price-card-desc" data-i18n="care_essential_desc">Routine checkups to keep everything healthy.</p>
+              </div>
+              <div class="price-amount-container">
+                <span class="price-currency">$</span>
+                <span class="price-val" data-base-price="29">29</span>
+                <span class="price-period" data-i18n="pkg_per_month">/ month</span>
+              </div>
+              <ul class="price-features">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_backups">Weekly secure backups</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_firewall">Security firewall updates</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_hosting_support">Hosting support & assistance</span></li>
+                <li class="muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_updates_monthly">Monthly content updates</span></li>
+                <li class="muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_perf_checks">Regular performance speed checks</span></li>
+                <li class="muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_priority_support">Priority 24/7 client support</span></li>
+              </ul>
+              <a href="#quote" class="btn btn-secondary select-package-btn" data-package="Essential Care Plan" data-i18n="pkg_subscribe">Subscribe</a>
+            </div>
+
+            <!-- Growth Care -->
+            <div class="price-card featured glass-card">
+              <div class="price-card-header">
+                <h3 class="price-card-title" data-i18n="care_growth_title">Growth Care</h3>
+                <p class="price-card-desc" data-i18n="care_growth_desc">Active changes & speeds optimizations.</p>
+              </div>
+              <div class="price-amount-container">
+                <span class="price-currency">$</span>
+                <span class="price-val" data-base-price="79">79</span>
+                <span class="price-period" data-i18n="pkg_per_month">/ month</span>
+              </div>
+              <ul class="price-features">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong><span data-i18n="care_everything_essential">Everything in Essential</span></strong></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_content_update_1">1 comprehensive content update</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_perf_cache">Performance & cache checkups</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_email_support">Priority technical email support</span></li>
+                <li class="muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_minor_adjust">Unlimited minor text adjustments</span></li>
+                <li class="muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_seo_monthly">Monthly SEO visibility review</span></li>
+              </ul>
+              <a href="#quote" class="btn btn-primary select-package-btn" data-package="Growth Care Plan" data-i18n="pkg_subscribe">Subscribe</a>
+            </div>
+
+            <!-- Premium Care -->
+            <div class="price-card glass-card">
+              <div class="price-card-header">
+                <h3 class="price-card-title" data-i18n="care_premium_title">Premium Care</h3>
+                <p class="price-card-desc" data-i18n="care_premium_desc">For sites that demand high-speed content swaps.</p>
+              </div>
+              <div class="price-amount-container">
+                <span class="price-currency">$</span>
+                <span class="price-val" data-base-price="149">149</span>
+                <span class="price-period" data-i18n="pkg_per_month">/ month</span>
+              </div>
+              <ul class="price-features">
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong><span data-i18n="care_everything_growth">Everything in Growth Care</span></strong></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_priority_24h">Priority 24-hr ticket turnaround</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_minor_changes">Unlimited minor content changes</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_seo_monthly">Monthly search visibility review</span></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="care_technician">Dedicated account technician</span></li>
+              </ul>
+              <a href="#quote" class="btn btn-secondary select-package-btn" data-package="Premium Care Plan" data-i18n="pkg_subscribe">Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Onboarding Contact Form / Lead Quiz -->
+      <section id="quote" class="lead-form-sec">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="lead_tag">Let's Build Together</span>
+            <h2 class="section-title" data-i18n="lead_title">Pre-Qualify Your Project</h2>
+            <p class="section-subtitle" data-i18n="lead_sub">Take our 1-minute digital roadmap quiz. Tell us about your project scale and get an instant custom roadmap mockup.</p>
+          </div>
+
+          <div class="lead-form-wrapper" id="quiz-wrapper">
+            <!-- This component is rendered dynamically by leadQuiz.js -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="#" class="logo-container" style="margin-bottom: 20px;">
+              <div class="logo-icon">C</div>
+              <span class="logo-text">Caribe<span>Interactive</span></span>
+            </a>
+            <p data-i18n="footer_desc">Premium web design, mobile apps, software platforms, and interactive digital marketing tools engineered for Puerto Rico businesses.</p>
+          </div>
+
+          <div>
+            <h4 class="footer-title" data-i18n="footer_nav">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#services" data-i18n="nav_services">Services</a></li>
+              <li><a href="#portfolio" data-i18n="nav_demos">Live Demos</a></li>
+              <li><a href="#pricing" data-i18n="footer_nav_pricing">Packages & Rates</a></li>
+              <li><a href="#care" data-i18n="nav_care">Care Plans</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title" data-i18n="footer_contact">Contact Us</h4>
+            <ul class="footer-contact-info">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:info@caribeinteractive.com" style="color: inherit; text-decoration: none;">info@caribeinteractive.com</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <a href="https://wa.me/17873963677" target="_blank" style="color: inherit; text-decoration: none;">WhatsApp: +1 (787) 396-3677</a>
+              </li>
+              <li style="font-size: 13px;">San Juan, Puerto Rico</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div data-i18n="footer_bottom_text">© 2026 Caribe Interactive. All rights reserved. Registered Puerto Rico Web & App Agency.</div>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
