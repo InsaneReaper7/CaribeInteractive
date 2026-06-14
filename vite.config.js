@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 export default defineConfig({
   base: './', // Use relative paths for built assets
-  plugins: [], // Added for Cloudflare Wrangler compatibility
+  plugins: [cloudflare()], // Added for Cloudflare Wrangler compatibility
 });
