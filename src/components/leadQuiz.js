@@ -371,6 +371,46 @@ export function initLeadQuiz(containerId) {
     `;
   }
 
+  async function sendEmailNotification() {
+    const key = import.meta.env.VITE_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE";
+    if (!key || key === "YOUR_ACCESS_KEY_HERE") {
+      console.warn("Web3Forms access key not configured. Email notification skipped.");
+      return;
+    }
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: key,
+          subject: `New Lead: ${state.name} - Ticket #C-${state.ticketNumber}`,
+          from_name: "Caribe Interactive Leads",
+          name: state.name,
+          email: state.email,
+          phone: state.phone,
+          business: state.businessName || "Not provided",
+          services: state.services.join(', '),
+          budget: budgetTiers[state.budgetIndex].label,
+          description: state.description,
+          ticket: state.ticketNumber,
+          language: getLang()
+        })
+      });
+      const result = await response.json();
+      if (result.success) {
+        console.log("Lead email sent successfully via Web3Forms.");
+      } else {
+        console.error("Web3Forms error:", result.message);
+      }
+    } catch (error) {
+      console.error("Failed to send lead email:", error);
+    }
+  }
+
   function setupQuizListeners() {
     const form = document.getElementById('quiz-form-element');
     if (!form) return;
@@ -477,6 +517,10 @@ export function initLeadQuiz(containerId) {
             form.reportValidity();
             return;
           }
+          
+          // Trigger email notification in background
+          sendEmailNotification();
+
           state.currentStep = 4;
           render();
         }
