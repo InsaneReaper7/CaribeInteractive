@@ -224,15 +224,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Trigger initial translation check
   translatePage(currentLang);
 
-  // --- HERO CHART ANIMATION ---
-  const chartBars = document.querySelectorAll('.hero-chart-bar');
-  setTimeout(() => {
-    chartBars.forEach(bar => {
-      const height = bar.style.height;
-      bar.style.height = '0%';
-      setTimeout(() => {
-        bar.style.height = height;
-      }, 300);
+  // --- HERO WORKBENCH TABS ---
+  const wbTabs = document.querySelectorAll('.workbench-tab');
+  const wbPanes = document.querySelectorAll('.workbench-pane');
+  wbTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetTab = tab.dataset.tab;
+      wbTabs.forEach(t => t.classList.remove('active'));
+      wbPanes.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const targetPane = document.getElementById(`pane-${targetTab}`);
+      if (targetPane) {
+        targetPane.classList.add('active');
+      }
     });
-  }, 500);
+  });
 });

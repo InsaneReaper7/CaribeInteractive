@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- Google Fonts: Plus Jakarta Sans, Outfit & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO Meta Tags -->
@@ -23,12 +27,9 @@
     <meta property="twitter:description" content="We help Puerto Rico businesses stand out online with modern websites, branding, and custom software solutions." />
   </head>
   <body>
-    <!-- Background mesh animations -->
-    <div class="bg-mesh">
-      <div class="mesh-circle mesh-circle-1"></div>
-      <div class="mesh-circle mesh-circle-2"></div>
-      <div class="mesh-circle mesh-circle-3"></div>
-    </div>
+    <!-- Modern Studio Ambient Atmosphere -->
+    <div class="bg-studio-grid"></div>
+    <div class="bg-ambient-light"></div>
 
     <!-- Header Navigation -->
     <header id="main-header">
@@ -45,7 +46,7 @@
             <li><a href="#care" class="nav-link" data-i18n="nav_care">Care Plans</a></li>
             <!-- Language Selection Toggle Button -->
             <li>
-              <button id="lang-toggle-btn" class="portfolio-tab-btn" style="padding: 6px 12px; font-size: 13px; font-weight: 700; border: 1px solid var(--border-color); color: var(--primary);">
+              <button id="lang-toggle-btn" class="lang-pill-btn" aria-label="Toggle language">
                 ES
               </button>
             </li>
@@ -67,41 +68,140 @@
         <div class="container">
           <div class="hero-grid">
             <div class="hero-content">
+              <!-- Live Studio Status Pill -->
+              <div class="hero-status-pill">
+                <span class="status-indicator"><span class="status-pulse"></span></span>
+                <span data-i18n="hero_status">Accepting Q4 / Q1 Projects · San Juan, PR</span>
+              </div>
+
               <h1 class="hero-title" data-i18n="hero_title">Websites, Apps & <span>Digital Solutions</span> for Puerto Rico Businesses</h1>
               <p class="hero-sub" data-i18n="hero_sub">We help local businesses stand out online with modern websites, branding, and custom software solutions.</p>
+              
               <div class="hero-btns">
                 <a href="#quote" class="btn btn-primary" id="hero-btn-quote">
                   <span data-i18n="hero_cta_quote">Get a Free Quote</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
                 <a href="#portfolio" class="btn btn-secondary" data-i18n="hero_cta_demos">View Live Demos</a>
               </div>
+
+              <!-- Sleek Studio Proof & Trust Badges -->
+              <div class="hero-proof-bar">
+                <div class="proof-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  <span data-i18n="hero_badge_bespoke">100% Bespoke Code</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  <span data-i18n="hero_badge_speed">Sub-Second Performance</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  <span data-i18n="hero_badge_bilingual">Native Bilingual (EN/ES)</span>
+                </div>
+              </div>
             </div>
             
+            <!-- Hero Visual: Studio Atelier Workbench (Human-Crafted Interactive Showcase) -->
             <div class="hero-visual">
-              <div class="hero-visual-card">
-                <div class="hero-widget-header">
-                  <div class="hero-dots">
-                    <span class="hero-dot"></span>
-                    <span class="hero-dot"></span>
-                    <span class="hero-dot"></span>
+              <div class="studio-workbench-card">
+                <!-- Workbench Terminal Header -->
+                <div class="workbench-header">
+                  <div class="workbench-dots">
+                    <span class="workbench-dot"></span>
+                    <span class="workbench-dot"></span>
+                    <span class="workbench-dot"></span>
                   </div>
-                  <div class="hero-tag" data-i18n="hero_tag" style="font-size: 11px; font-weight:600; color:var(--primary); text-transform:uppercase; letter-spacing:1px;">Live Analytics</div>
-                </div>
-                <div class="hero-widget-body">
-                  <div class="hero-tagline" data-i18n="hero_tagline">Grow Your Business</div>
-                  <div class="hero-chart-container" id="hero-chart">
-                    <div class="hero-chart-bar" style="height: 40%"></div>
-                    <div class="hero-chart-bar" style="height: 65%"></div>
-                    <div class="hero-chart-bar" style="height: 50%"></div>
-                    <div class="hero-chart-bar" style="height: 85%"></div>
-                    <div class="hero-chart-bar" style="height: 70%"></div>
-                    <div class="hero-chart-bar" style="height: 100%"></div>
+                  <div class="workbench-file-badge">
+                    <span class="file-icon">⚡</span>
+                    <span>caribe-studio.engine</span>
+                  </div>
+                  <div class="workbench-status-pill">
+                    <span class="live-pulse-dot"></span>
+                    <span>San Juan · 14ms</span>
                   </div>
                 </div>
-                <div class="hero-widget-footer">
-                  <div class="hero-stat"><span data-i18n="hero_growth">Growth:</span> <span>+142%</span></div>
-                  <div class="hero-stat"><span data-i18n="hero_leads">Leads:</span> <span data-i18n="hero_leads_active">Active</span></div>
+
+                <!-- Interactive Workbench Tabs -->
+                <div class="workbench-tabs">
+                  <button class="workbench-tab active" data-tab="showcase" data-i18n="hero_tab_showcase">Live Work</button>
+                  <button class="workbench-tab" data-tab="stack" data-i18n="hero_tab_stack">Tech Stack</button>
+                  <button class="workbench-tab" data-tab="impact" data-i18n="hero_tab_impact">Client Impact</button>
+                </div>
+
+                <!-- Workbench Body (Dynamic Interactive Panels) -->
+                <div class="workbench-body">
+                  <!-- Tab 1: Live Showcase -->
+                  <div class="workbench-pane active" id="pane-showcase">
+                    <div class="studio-preview-mockup">
+                      <div class="mockup-header-bar">
+                        <div class="mockup-domain">https://elcaribe.pr</div>
+                        <div class="mockup-score-badge">100% Web Vitals</div>
+                      </div>
+                      <div class="mockup-content-snippet">
+                        <div class="mockup-hero-row">
+                          <div class="mockup-badge">Fine Dining & Cocktails</div>
+                          <div class="mockup-action-pill">Open Table Live</div>
+                        </div>
+                        <div class="mockup-headline">El Caribe Gourmet Experience</div>
+                        <div class="mockup-metric-grid">
+                          <div class="mockup-metric">
+                            <span class="num">0.4s</span>
+                            <span class="lbl">First Paint</span>
+                          </div>
+                          <div class="mockup-metric">
+                            <span class="num">+164%</span>
+                            <span class="lbl">Bookings</span>
+                          </div>
+                          <div class="mockup-metric">
+                            <span class="num">A+</span>
+                            <span class="lbl">Security</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 2: Tech Stack -->
+                  <div class="workbench-pane" id="pane-stack">
+                    <div class="stack-grid">
+                      <div class="stack-tag-pill"><span>⚡</span> Vite 8 / Next.js</div>
+                      <div class="stack-tag-pill"><span>🔷</span> TypeScript Native</div>
+                      <div class="stack-tag-pill"><span>🎨</span> Bespoke UI Systems</div>
+                      <div class="stack-tag-pill"><span>📱</span> iOS & Android Apps</div>
+                      <div class="stack-tag-pill"><span>🌐</span> Cloudflare Edge</div>
+                      <div class="stack-tag-pill"><span>💳</span> Stripe & ATH Móvil</div>
+                    </div>
+                    <div class="stack-note">No bloated page builders. 100% human-crafted clean architecture.</div>
+                  </div>
+
+                  <!-- Tab 3: Client Impact -->
+                  <div class="workbench-pane" id="pane-impact">
+                    <div class="impact-stats-list">
+                      <div class="impact-stat-item">
+                        <div class="impact-val">+140%</div>
+                        <div class="impact-desc">Average increase in customer conversions across client deployments</div>
+                      </div>
+                      <div class="impact-stat-item">
+                        <div class="impact-val">99.8%</div>
+                        <div class="impact-desc">Lighthouse performance & accessibility rating on launch day</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Workbench Footer Bar -->
+                <div class="workbench-footer">
+                  <div class="wb-meta-item">
+                    <span class="wb-label" data-i18n="hero_growth">Performance:</span>
+                    <span class="wb-val">100/100 Optimal</span>
+                  </div>
+                  <div class="wb-meta-item">
+                    <span class="wb-label" data-i18n="hero_leads">Availability:</span>
+                    <span class="wb-val highlight" data-i18n="hero_leads_active">Immediate</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,9 +357,8 @@
                 <p class="price-card-desc" data-i18n="pkg_launch_desc">Perfect for startups and local businesses.</p>
               </div>
               <div class="price-amount-container">
-                <span class="price-currency">$</span>
-                <span class="price-val" id="price-val-launch" data-price-info="595" data-price-inter="895">595</span>
-                <span class="price-period" data-i18n="pkg_onetime">one-time</span>
+                <span class="price-val" id="price-val-launch" data-price-info="TBD" data-price-inter="TBD">TBD</span>
+                <span class="price-period" data-i18n="pkg_scope_based">custom scope</span>
               </div>
               <div class="price-delivery" data-i18n="pkg_launch_delivery">Delivery: 1-2 weeks</div>
               <ul class="price-features">
@@ -275,7 +374,7 @@
                 <!-- Interactive Only Feature -->
                 <li class="interactive-only-feature" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong style="color:var(--primary);"><span data-i18n="list_checkout">Checkout / Shopping System</span></strong></li>
               </ul>
-              <a href="#quote" class="btn btn-secondary select-package-btn" id="btn-select-launch" data-package="Launch (Informative)" data-i18n="pkg_get_started">Get Started</a>
+              <a href="#quote" class="btn btn-secondary select-package-btn" id="btn-select-launch" data-package="Launch" data-i18n="pkg_get_started">Get Started</a>
             </div>
 
             <!-- Growth Package -->
@@ -285,9 +384,8 @@
                 <p class="price-card-desc" data-i18n="pkg_growth_desc">Most popular for growing brands & local shops.</p>
               </div>
               <div class="price-amount-container">
-                <span class="price-currency">$</span>
-                <span class="price-val" id="price-val-growth" data-price-info="895" data-price-inter="1195">895</span>
-                <span class="price-period" data-i18n="pkg_onetime">one-time</span>
+                <span class="price-val" id="price-val-growth" data-price-info="TBD" data-price-inter="TBD">TBD</span>
+                <span class="price-period" data-i18n="pkg_scope_based">custom scope</span>
               </div>
               <div class="price-delivery" data-i18n="pkg_growth_delivery">Delivery: 2-3 weeks</div>
               <ul class="price-features">
@@ -301,7 +399,7 @@
                 <!-- Interactive Only Feature -->
                 <li class="interactive-only-feature" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong style="color:var(--primary);"><span data-i18n="list_checkout">Checkout / Shopping System</span></strong></li>
               </ul>
-              <a href="#quote" class="btn btn-primary select-package-btn" id="btn-select-growth" data-package="Growth (Informative)" data-i18n="pkg_get_started">Get Started</a>
+              <a href="#quote" class="btn btn-primary select-package-btn" id="btn-select-growth" data-package="Growth" data-i18n="pkg_get_started">Get Started</a>
             </div>
 
             <!-- Business+ Package -->
@@ -311,9 +409,8 @@
                 <p class="price-card-desc" data-i18n="pkg_business_desc">Comprehensive website & branding toolkit.</p>
               </div>
               <div class="price-amount-container">
-                <span class="price-currency">$</span>
-                <span class="price-val" id="price-val-business" data-price-info="1295" data-price-inter="1595">1,295</span>
-                <span class="price-period" data-i18n="pkg_onetime">one-time</span>
+                <span class="price-val" id="price-val-business" data-price-info="TBD" data-price-inter="TBD">TBD</span>
+                <span class="price-period" data-i18n="pkg_scope_based">custom scope</span>
               </div>
               <div class="price-delivery" data-i18n="pkg_business_delivery">Delivery: 3-4 weeks</div>
               <ul class="price-features">
@@ -328,7 +425,7 @@
                 <!-- Interactive Only Feature -->
                 <li class="interactive-only-feature" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><strong style="color:var(--primary);"><span data-i18n="list_checkout">Checkout / Shopping System</span></strong></li>
               </ul>
-              <a href="#quote" class="btn btn-secondary select-package-btn" id="btn-select-business" data-package="Business+ (Informative)" data-i18n="pkg_get_started">Get Started</a>
+              <a href="#quote" class="btn btn-secondary select-package-btn" id="btn-select-business" data-package="Business+" data-i18n="pkg_get_started">Get Started</a>
             </div>
           </div>
 
@@ -346,7 +443,7 @@
                 <h3 data-i18n="custom_web_title">Web Applications</h3>
                 <span class="custom-tag" data-i18n="custom_dev_tag">Custom Software</span>
               </div>
-              <div class="custom-price" data-i18n="custom_web_price">Starting at $2,500+</div>
+              <div class="custom-price" data-i18n="custom_web_price">TBD</div>
               <h4 class="custom-examples-header" data-i18n="custom_examples_header">Common Examples</h4>
               <ul class="custom-examples">
                 <li data-i18n="ex_appointment">Appointment & scheduling systems</li>
@@ -363,7 +460,7 @@
                 <h3 data-i18n="custom_mobile_title">Mobile Applications</h3>
                 <span class="custom-tag">iOS & Android</span>
               </div>
-              <div class="custom-price" data-i18n="custom_mobile_price">Starting at $4,000+</div>
+              <div class="custom-price" data-i18n="custom_mobile_price">TBD</div>
               <h4 class="custom-examples-header" data-i18n="custom_examples_header">Common Examples</h4>
               <ul class="custom-examples">
                 <li data-i18n="ex_loyalty">Business loyalty & loyalty stamp apps</li>
@@ -380,7 +477,7 @@
                 <h3 data-i18n="custom_experience_title">Interactive Experiences</h3>
                 <span class="custom-tag" data-i18n="service_game_title">Website Games</span>
               </div>
-              <div class="custom-price" data-i18n="custom_experience_price">Starting at $1,500+</div>
+              <div class="custom-price" data-i18n="custom_experience_price">TBD</div>
               <h4 class="custom-examples-header" data-i18n="custom_examples_header">Common Examples</h4>
               <ul class="custom-examples">
                 <li data-i18n="ex_wheel">Promotional luck wheels ("Spin to Win")</li>
@@ -411,8 +508,7 @@
                 <p class="price-card-desc" data-i18n="care_essential_desc">Routine checkups to keep everything healthy.</p>
               </div>
               <div class="price-amount-container">
-                <span class="price-currency">$</span>
-                <span class="price-val" data-base-price="29">29</span>
+                <span class="price-val" data-base-price="TBD">TBD</span>
                 <span class="price-period" data-i18n="pkg_per_month">/ month</span>
               </div>
               <ul class="price-features">
@@ -433,8 +529,7 @@
                 <p class="price-card-desc" data-i18n="care_growth_desc">Active changes & speeds optimizations.</p>
               </div>
               <div class="price-amount-container">
-                <span class="price-currency">$</span>
-                <span class="price-val" data-base-price="79">79</span>
+                <span class="price-val" data-base-price="TBD">TBD</span>
                 <span class="price-period" data-i18n="pkg_per_month">/ month</span>
               </div>
               <ul class="price-features">
@@ -455,8 +550,7 @@
                 <p class="price-card-desc" data-i18n="care_premium_desc">For sites that demand high-speed content swaps.</p>
               </div>
               <div class="price-amount-container">
-                <span class="price-currency">$</span>
-                <span class="price-val" data-base-price="149">149</span>
+                <span class="price-val" data-base-price="TBD">TBD</span>
                 <span class="price-period" data-i18n="pkg_per_month">/ month</span>
               </div>
               <ul class="price-features">

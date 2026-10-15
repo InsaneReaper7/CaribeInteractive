@@ -5,6 +5,10 @@
   position: relative;
   overflow: hidden;
   margin-top: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
 }
 
 @media (max-width: 576px) {
@@ -39,18 +43,18 @@
   left: 0;
   width: 0%;
   height: 4px;
-  background: var(--gradient-brand);
+  background: var(--primary);
   transform: translateY(-50%);
   z-index: 1;
   transition: width var(--trans-normal) ease;
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 10px rgba(240, 179, 67, 0.4);
 }
 
 .quiz-step-dot {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #0d1224;
+  background: #0f131d;
   border: 2px solid var(--border-color);
   display: flex;
   align-items: center;
@@ -67,14 +71,14 @@
 .quiz-step-dot.active {
   border-color: var(--primary);
   color: var(--primary);
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+  box-shadow: 0 0 15px rgba(240, 179, 67, 0.25);
 }
 
 .quiz-step-dot.completed {
-  background: var(--gradient-brand);
+  background: var(--primary);
   border-color: var(--primary);
-  color: #030712;
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+  color: #07080c;
+  box-shadow: 0 0 15px rgba(240, 179, 67, 0.25);
 }
 
 /* Form Steps Viewport */
@@ -122,10 +126,10 @@
 
 .quiz-input, .quiz-textarea {
   width: 100%;
-  background: rgba(5, 7, 15, 0.5);
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  padding: 14px 18px;
   color: var(--text-main);
   font-family: var(--font-body);
   font-size: 15px;
@@ -135,8 +139,8 @@
 .quiz-input:focus, .quiz-textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
-  background: rgba(5, 7, 15, 0.8);
+  box-shadow: 0 0 10px rgba(240, 179, 67, 0.15);
+  background: rgba(7, 8, 12, 0.85);
 }
 
 .quiz-textarea {
@@ -188,19 +192,19 @@
 
 .quiz-check-card:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(0, 242, 254, 0.3);
+  border-color: rgba(240, 179, 67, 0.3);
 }
 
 .quiz-check-card.checked {
-  background: rgba(0, 242, 254, 0.04);
+  background: rgba(240, 179, 67, 0.05);
   border-color: var(--primary);
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+  box-shadow: 0 0 15px rgba(240, 179, 67, 0.12);
 }
 
 .quiz-check-card.checked .quiz-check-icon {
-  background: var(--gradient-brand);
-  color: #030712;
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+  background: var(--primary);
+  color: #07080c;
+  box-shadow: 0 0 10px rgba(240, 179, 67, 0.3);
 }
 
 .quiz-check-title {
@@ -227,7 +231,7 @@
   font-weight: 800;
   color: var(--primary);
   margin-bottom: 24px;
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  text-shadow: 0 0 15px rgba(240, 179, 67, 0.2);
 }
 
 .quiz-slider {
@@ -247,9 +251,9 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--gradient-brand);
+  background: var(--primary);
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+  box-shadow: 0 0 10px rgba(240, 179, 67, 0.5);
   transition: transform 0.1s;
 }
 
@@ -260,22 +264,20 @@
 .quiz-slider-labels {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-family: var(--font-heading);
+  font-size: 13px;
   color: var(--text-muted);
   font-weight: 500;
 }
 
-/* Step Footer / Buttons Container */
+/* Form Actions / Navigation Footer */
 .quiz-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 40px;
   padding-top: 24px;
   border-top: 1px solid var(--border-color);
-}
-
-.quiz-footer .btn {
-  min-width: 120px;
 }
 
 .quiz-footer .btn-back {
@@ -297,7 +299,7 @@
 .quiz-success-icon {
   width: 80px;
   height: 80px;
-  background: rgba(0, 242, 254, 0.1);
+  background: rgba(240, 179, 67, 0.1);
   border: 2px solid var(--primary);
   color: var(--primary);
   border-radius: 50%;
@@ -306,19 +308,20 @@
   justify-content: center;
   font-size: 36px;
   margin: 0 auto 24px auto;
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+  box-shadow: 0 0 25px rgba(240, 179, 67, 0.2);
   animation: pulseGlow 2s infinite alternate;
 }
 
 @keyframes pulseGlow {
-  0% { box-shadow: 0 0 15px rgba(0, 242, 254, 0.2); transform: scale(1); }
-  100% { box-shadow: 0 0 35px rgba(0, 242, 254, 0.5); transform: scale(1.05); }
+  0% { box-shadow: 0 0 15px rgba(240, 179, 67, 0.2); transform: scale(1); }
+  100% { box-shadow: 0 0 35px rgba(240, 179, 67, 0.45); transform: scale(1.05); }
 }
 
 .quiz-success-container h3 {
   font-size: 28px;
   margin-bottom: 12px;
   font-weight: 800;
+  color: #ffffff;
 }
 
 .quiz-success-container p {
@@ -330,7 +333,7 @@
 
 .roadmap-card {
   text-align: left;
-  background: rgba(5, 7, 15, 0.4);
+  background: rgba(7, 8, 12, 0.6);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 30px;
@@ -343,7 +346,7 @@
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--primary);
   letter-spacing: 1px;
   margin-bottom: 24px;
   display: flex;
@@ -379,7 +382,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #0d1224;
+  background: #0f131d;
   border: 2px solid var(--text-muted);
   transition: all 0.3s;
 }
